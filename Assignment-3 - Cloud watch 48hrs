@@ -1,0 +1,10 @@
+Title - Create aws lambda function which will execute every 48hrs to create an instance
+Create an AWS Lambda function called "ec2time-function" that will execute every 48 hours to create an instance.
+Create an IAM role that grants the necessary permissions to create an ec2 instance and handle CloudWatch requests. Assign this role to the Lambda function.
+Open the CloudWatch service in the AWS Management Console.
+Click on "Rules" in the left navigation pane.
+Click on "Create rule" to create a new CloudWatch Events rule.
+Configure the rule to run on a schedule of "Fixed rate of" 48 hours.
+Specify the Lambda function "ec2time-function" as the target for the rule.
+Provide a name for the rule and save it.
+Test the setup by monitoring the CloudWatch Logs for the Lambda function and verifying that a new ec2 instance is created every 48 hours.
