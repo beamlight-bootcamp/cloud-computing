@@ -1,0 +1,7 @@
+1. Create a role - with s3 bucket permission
+2. Create a function - lambda function
+3. Copy and paste the github s3.py code - Note: must define a unique bucket name
+4. Configuration - change the time and add the new role for bucket creation
+5. Deploy your code
+6. Test - create event for the new s3 lambda function
+7. Test - Click test again to run the code
