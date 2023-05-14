@@ -1,0 +1,40 @@
+Step 1 - Create an IAM Role:
+
+To create an IAM role for your Lambda function, follow these steps:
+
+Go to the AWS Management Console and navigate to the IAM service.
+Click on "Roles" in the left-hand menu.
+Click on the "Create role" button.
+In the "Create role" wizard, select "Lambda" as the service that will use this role.
+Click on the "Next: Permissions" button.
+In the "Attach permissions policies" step, you can either search for an existing policy (e.g., "AmazonEC2FullAccess"). and click next.
+
+Provide a name for the IAM role in the "Role name" field.
+Click on the "Create role" button to create the IAM role.
+
+Step 2 - Create your Lambda Function:
+
+To create your Lambda function using the AWS Management Console, follow these steps:
+
+Go to the AWS Management Console and navigate to the Lambda service.
+Click on the "Create function" button.
+Choose an appropriate function name for your Lambda function.
+Select the desired runtime for your function. In this case, select "Python 3.10" as the runtime.
+
+Click on the "Create function" button to create the Lambda function.
+
+Select the function - Go to configuration tab
+On the Configuration tab - click edit - go to timeout - 30sec or more
+Go to execution role section - select use an existing role 
+Select the role you have created on step1 under iam section
+Save the configuration
+
+Select code tab 
+In the code editor, you can copy and paste the EC2 Python code you want to use for your Lambda function(I have uploaded the code to github repo). Ensure that you modify the key name to match your own key.
+
+Once you've pasted the code, click on the "Deploy" button to save your changes.
+To test your Lambda function, click on the "Test" button.
+Click on the "Create" button to create a new test event. Provide a name for the event and customize the event data if necessary.
+After creating the test event, go back to the "Test" tab and click on the "Test" button again. This will invoke your Lambda function using the test event you created.
+
+Verify that the Lambda function executes successfully and produces the expected output. You can view the logs and the function's response in the console.
